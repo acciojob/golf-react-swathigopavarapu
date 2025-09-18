@@ -7,10 +7,11 @@ class App extends Component {
     this.state = {
       renderBall: false,
       posi: 0,
-      ballPosition: { left: "0px", top: "10%" } 
+      ballPosition: { left: "0px", top: "10%" }
     };
+
     this.buttonClickHandler = this.buttonClickHandler.bind(this);
-    this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this); 
   }
 
   componentDidMount() {
