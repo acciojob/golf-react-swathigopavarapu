@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import '../styles/App.css';
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -11,11 +10,9 @@ class App extends Component {
     };
     this.buttonClickHandler = this.buttonClickHandler.bind(this);
   }
-
   componentDidMount() {
     window.addEventListener("keydown", this.handleKeyDown);
   }
-
   componentWillUnmount() {
     window.removeEventListener("keydown", this.handleKeyDown);
     clearInterval(this.ballInterval);
@@ -33,7 +30,6 @@ class App extends Component {
       });
     }
   }
-
   buttonClickHandler() {
     this.setState(
       { renderBall: true, posi: 0, ballPosition: { left: "50%", top: "10%" } },
@@ -55,7 +51,6 @@ class App extends Component {
       }
     );
   }
-
   renderBallOrButton() {
     if (this.state.renderBall) {
       return <div className="ball" style={this.state.ballPosition}></div>;
@@ -63,7 +58,6 @@ class App extends Component {
       return <button className="start" onClick={this.buttonClickHandler}>Start</button>;
     }
   }
-
   render() {
     return (
       <div className="playground">
