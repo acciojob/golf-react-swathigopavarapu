@@ -9,6 +9,7 @@ class App extends Component {
       ballPosition: { left: "50%", top: "10%" }
     };
     this.buttonClickHandler = this.buttonClickHandler.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
   }
   componentDidMount() {
     window.addEventListener("keydown", this.handleKeyDown);
